@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Currency Changer</title>
+    <style>
+        html, body {
+            color: #3b2e2e;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Playfair Display, serif;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .btn-show {
+            margin-top: 10px;
+            background-color: #63504c;
+            user-select: #3b2e2e;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-show:hover {
+            background-color: black;
+        }
+
+        .btn-show:focus {
+            outline:none;
+            box-shadow: 0 0 0 2px white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container{
+            margin-top: 40px;
+            padding: 10000;
+            background-color:#c7b9b9 ;
+            border-radius:#3b2e2e;
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 1.0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Solve for the following if m = 21 & k = 15</h1>
+        <p class="text-center">Click to get answer</p>
+<center>
+        <div class="section">
+            <h3>Arithmetic Operator</h3>
+            <p>1.) Exponent</p>
+            <p>2.) Mod</p>
+            <button class="btn btn-primary btn-show" onclick="showArithmetic()">Show Answer</button>
+            <div id="arithmetic-output" class="mt-2"></div>
+        </div>
+
+        <div class="section">
+            <h3>Comparison Operator</h3>
+            <p>1.) m>k?</p>
+            <p>2.) m=k?</p>
+            <button class="btn btn-primary btn-show" onclick="showComparison()">Show Answer</button>
+            <div id="comparison-output" class="mt-2"></div>
+        </div>
+
+        <div class="section">
+            <h3>Logical Operator</h3>
+            <p>1.) (m <= k) && (m >= k)</p>
+            <p>2.) (m != k) || (m == k)</p>
+            <button class="btn btn-primary btn-show" onclick="showLogical()">Show Answer</button>
+            <div id="logical-output" class="mt-2"></div>
+        </div>
+    </div>
+
+    <script>
+        let m = 21;
+        let k = 15;
+
+        function showArithmetic() {
+            const exponent = m ** k; 
+            const mod = m % k;
+
+            document.getElementById("arithmetic-output").innerHTML = `
+                <p>Exponent: ${exponent}</p>
+                <p>Mod: ${mod}</p>
+            `;
+        }
+
+        function showComparison() {
+            const isGreater = m > k;
+            const isEqual = m === k; 
+
+            document.getElementById("comparison-output").innerHTML = `
+                <p>Is m greater than k? ${isGreater}</p>
+                <p>Is m equal to k? ${isEqual}</p>
+            `;
+        }
+
+        function showLogical() {
+            const logicalAnd = (m <= k) && (m >= k); 
+            const logicalOr = (m != k) || (m == k); 
+            document.getElementById("logical-output").innerHTML = `
+                <p>(m <= k) && (m >= k): ${logicalAnd}</p>
+                <p>(m != k) || (m == k): ${logicalOr}</p>
+            `;
+        }
+</script>
+</center>
+    </script>
+</body>
+</html>
