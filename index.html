@@ -84,38 +84,27 @@
     </div>
 
     <script>
-        let m = 21;
-        let k = 15;
+        m = 21
+        k = 15
 
         function showArithmetic() {
-            const exponent = m ** k; 
-            const mod = m % k;
-
-            document.getElementById("arithmetic-output").innerHTML = `
-                <p>Exponent: ${exponent}</p>
-                <p>Mod: ${mod}</p>
-            `;
+            document.getElementById("arithmetic-output").innerHTML = 
+            "Exponent: " + (m ** k) + "<br>" +
+            "Mod: " + (m % k)
         }
 
         function showComparison() {
-            const isGreater = m > k;
-            const isEqual = m === k; 
-
-            document.getElementById("comparison-output").innerHTML = `
-                <p>Is m greater than k? ${isGreater}</p>
-                <p>Is m equal to k? ${isEqual}</p>
-            `;
+            document.getElementById("comparison-output").innerHTML = 
+            "Is m greater than k? " + (m > k) + "<br>" +
+            "Is m equal to k? " + (m === k)
         }
 
         function showLogical() {
-            const logicalAnd = (m <= k) && (m >= k); 
-            const logicalOr = (m != k) || (m == k); 
-            document.getElementById("logical-output").innerHTML = `
-                <p>(m <= k) && (m >= k): ${logicalAnd}</p>
-                <p>(m != k) || (m == k): ${logicalOr}</p>
-            `;
+            document.getElementById("logical-output").innerHTML = 
+            "(m <= k) && (m >= k): " + ((m <= k) && (m >= k)) + "<br>" +
+            "(m != k) || (m == k): " + ((m != k) || (m == k))
         }
-</script>
+    </script>
 </center>
     </script>
 </body>
